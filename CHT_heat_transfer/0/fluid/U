@@ -1,0 +1,138 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0/fluid";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 1 -1 0 0 0 0 ];
+
+internalField   uniform ( 0.1 0 0 );
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    wallOuter
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           uniform ( 0.1 0 0 );
+    }
+    outlet
+    {
+        type            inletOutlet;
+        value           uniform ( 0.1 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    fluid_to_solid_11
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_5
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_3
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_6
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_1
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_18
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_14
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_16
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_10
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_13
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_12
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_4
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_7
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_15
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_8
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_2
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_17
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    fluid_to_solid_9
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+}
+
+
+// ************************************************************************* //

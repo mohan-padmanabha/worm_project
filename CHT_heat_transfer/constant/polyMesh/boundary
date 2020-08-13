@@ -15,47 +15,56 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-6
+7
 (
-    maxY
-    {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          300;
-        startFace       8300;
-    }
-    minX
+    frontAndBack
     {
         type            patch;
-        nFaces          100;
-        startFace       8600;
+        physicalType    patch;
+        nFaces          17288;
+        startFace       20947;
     }
-    maxX
+    frondAndBackSolid
     {
         type            patch;
-        nFaces          100;
-        startFace       8700;
+        physicalType    patch;
+        nFaces          3876;
+        startFace       38235;
     }
-    minY
+    wallOuter
     {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          300;
-        startFace       8800;
+        type            patch;
+        physicalType    patch;
+        nFaces          396;
+        startFace       42111;
     }
-    minZ
+    inlet
     {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          300;
-        startFace       9100;
+        type            patch;
+        physicalType    patch;
+        nFaces          19;
+        startFace       42507;
     }
-    maxZ
+    outlet
     {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          300;
-        startFace       9400;
+        type            patch;
+        physicalType    patch;
+        nFaces          19;
+        startFace       42526;
+    }
+    wallInner
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          0;
+        startFace       42545;
+    }
+    HeatWall
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          0;
+        startFace       42545;
     }
 )
 

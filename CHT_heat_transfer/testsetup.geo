@@ -360,7 +360,7 @@ Curve Loop(14) = {26, 23, 24, 25};
 //+
 Curve Loop(15) = {37, 38, 35, 36};
 //+
-Curve Loop(16) = {74, 71, 72, 73};
+Curve Loop(16) = {74, 71, 72, 73};  
 //+
 Curve Loop(17) = {78, 75, 76, 77};
 //+
@@ -418,24 +418,48 @@ Transfinite Curve {56, 58, 52, 54, 9, 7, 11, 13, 50, 48, 59, 61, 65, 63, 44, 46,
 Recombine Surface {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
 
 Extrude {0, 0, 0.01} {
-   Surface{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}; Layers{1}; Recombine;
+  Surface{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}; Layers{1}; Recombine;
 }
 //+
- Physical Surface("inlet") = {169};
+Physical Surface("inlet") = {169};
 //+
- Physical Surface("outlet") = {181};
+Physical Surface("outlet") = {181};
 //+
- Physical Surface("frontAndBack") = {470, 1};
+Physical Surface("frontAndBack") = {470, 1};
 //+
- Physical Surface("wallOuter") = {161, 165, 177, 173};
+Physical Surface("wallOuter") = {161, 165, 177, 173};
 //+
- Physical Surface("wallInner") = {429, 433, 437, 425, 413, 409, 421, 417, 441, 453, 445, 449, 397, 401, 405, 393, 333, 329, 341, 337, 345, 357, 349, 353, 301, 305, 309, 297, 317, 321, 325, 313, 237, 241, 245, 233, 217, 221, 225, 229, 201, 205, 209, 213, 261, 257, 253, 249, 185, 197, 189, 193, 277, 265, 269, 273, 289, 293, 281, 285, 361, 373, 365, 369, 389, 381, 385, 377, 469, 465, 461, 457};
+// Physical Surface("wallInner") = {429, 433, 437, 425, 413, 409, 421, 417, 441, 453, 445, 449, 397, 401, 405, 393, 333, 329, 341, 337, 345, 357, 349, 353, 301, 305, 309, 297, 317, 321, 325, 313, 237, 241, 245, 233, 217, 221, 225, 229, 201, 205, 209, 213, 261, 257, 253, 249, 185, 197, 189, 193, 277, 265, 269, 273, 289, 293, 281, 285, 361, 373, 365, 369, 389, 381, 385, 377, 469, 465, 461, 457};
 //+
 
- Physical Volume("fluid") = {1};
-// Transfinite Surface {470};
+Physical Volume("fluid") = {1};
+Transfinite Surface {470};
 //+
 //+
 Physical Surface("frondAndBackSolid") = {492, 2, 558, 5, 624, 8, 514, 3, 536, 4, 646, 9, 580, 6, 602, 7, 668, 10, 690, 11, 712, 12, 822, 17, 734, 13, 756, 14, 844, 18, 778, 15, 800, 16, 866, 19};
 //+
-Physical Volume("solid") = {2, 5, 8, 9, 4, 3, 6, 7, 10, 17, 12, 11, 13, 14, 18, 15, 16, 19};
+Physical Volume("solid_1") = {2};
+Physical Volume("solid_2") = {3};
+Physical Volume("solid_3") = {4};
+Physical Volume("solid_4") = {5};
+Physical Volume("solid_5") = {6};
+Physical Volume("solid_6") = {7};
+Physical Volume("solid_7") = {8};
+Physical Volume("solid_8") = {9};
+Physical Volume("solid_9") = {10};
+Physical Volume("solid_10") = {11};
+Physical Volume("solid_11") = {12};
+Physical Volume("solid_12") = {13};
+Physical Volume("solid_13") = {14};
+Physical Volume("solid_14") = {15};
+Physical Volume("solid_15") = {16};
+Physical Volume("solid_16") = {17};
+Physical Volume("solid_17") = {18};
+Physical Volume("solid_18") = {19};
+
+
+//+
+Physical Surface("HeatWall") = {189, 269, 285, 365, 381, 461, 445, 429, 413, 333, 317, 237, 221, 205, 253, 301, 349, 397};
+//+
+Physical Surface("wallInner") = {193, 197, 185, 273, 277, 265, 281, 293, 289, 305, 309, 297, 369, 373, 361, 353, 357, 345, 257, 261, 249, 209, 213, 201, 225, 229, 217, 233, 245, 241, 321, 325, 313, 329, 341, 337, 377, 389, 385, 401, 405, 393, 417, 421, 409, 425, 437, 433, 441, 453, 449, 457, 469, 465};
+

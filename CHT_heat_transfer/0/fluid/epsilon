@@ -1,0 +1,138 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/fluid";
+    object      epsilon;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 2 -3 0 0 0 0 ];
+
+internalField   uniform 0.01;
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    wallOuter
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 0.01;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        value           uniform 0.01;
+        inletValue      uniform 0.01;
+    }
+    fluid_to_solid_11
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_5
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_3
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_6
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_1
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_18
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_14
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_16
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_10
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_13
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_12
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_4
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_7
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_15
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_8
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_2
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_17
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+    fluid_to_solid_9
+    {
+        type            epsilonWallFunction;
+        value           uniform 0.01;
+    }
+}
+
+
+// ************************************************************************* //

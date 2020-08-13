@@ -1,0 +1,230 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/fluid/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+22
+(
+    frontAndBack
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          17288;
+        startFace       16657;
+    }
+    wallOuter
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          396;
+        startFace       33945;
+    }
+    inlet
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          19;
+        startFace       34341;
+    }
+    outlet
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          19;
+        startFace       34360;
+    }
+    fluid_to_solid_11
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34379;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_11;
+        samplePatch     solid_11_to_fluid;
+    }
+    fluid_to_solid_5
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34425;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_5;
+        samplePatch     solid_5_to_fluid;
+    }
+    fluid_to_solid_3
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34471;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_3;
+        samplePatch     solid_3_to_fluid;
+    }
+    fluid_to_solid_6
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34517;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_6;
+        samplePatch     solid_6_to_fluid;
+    }
+    fluid_to_solid_1
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34563;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_1;
+        samplePatch     solid_1_to_fluid;
+    }
+    fluid_to_solid_18
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34609;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_18;
+        samplePatch     solid_18_to_fluid;
+    }
+    fluid_to_solid_14
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34655;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_14;
+        samplePatch     solid_14_to_fluid;
+    }
+    fluid_to_solid_16
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34701;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_16;
+        samplePatch     solid_16_to_fluid;
+    }
+    fluid_to_solid_10
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34747;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_10;
+        samplePatch     solid_10_to_fluid;
+    }
+    fluid_to_solid_13
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34793;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_13;
+        samplePatch     solid_13_to_fluid;
+    }
+    fluid_to_solid_12
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34839;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_12;
+        samplePatch     solid_12_to_fluid;
+    }
+    fluid_to_solid_4
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34885;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_4;
+        samplePatch     solid_4_to_fluid;
+    }
+    fluid_to_solid_7
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34931;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_7;
+        samplePatch     solid_7_to_fluid;
+    }
+    fluid_to_solid_15
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       34977;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_15;
+        samplePatch     solid_15_to_fluid;
+    }
+    fluid_to_solid_8
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       35023;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_8;
+        samplePatch     solid_8_to_fluid;
+    }
+    fluid_to_solid_2
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       35069;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_2;
+        samplePatch     solid_2_to_fluid;
+    }
+    fluid_to_solid_17
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       35115;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_17;
+        samplePatch     solid_17_to_fluid;
+    }
+    fluid_to_solid_9
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          46;
+        startFace       35161;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid_9;
+        samplePatch     solid_9_to_fluid;
+    }
+)
+
+// ************************************************************************* //

@@ -1,0 +1,89 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       regIOobject;
+    location    "constant/solid_13/polyMesh";
+    object      faceZones;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+2
+(
+wallInner
+{
+    type faceZone;
+faceLabels      List<label> 
+27
+(
+405
+406
+407
+408
+409
+410
+413
+415
+417
+419
+420
+424
+425
+428
+431
+432
+434
+435
+436
+437
+438
+440
+441
+443
+445
+446
+447
+)
+;
+flipMap         List<bool> 27{0};
+}
+
+HeatWall
+{
+    type faceZone;
+faceLabels      List<label> 
+19
+(
+411
+412
+414
+416
+418
+421
+422
+423
+426
+427
+429
+430
+433
+439
+442
+444
+448
+449
+450
+)
+;
+flipMap         List<bool> 19{0};
+}
+)
+
+// ************************************************************************* //
