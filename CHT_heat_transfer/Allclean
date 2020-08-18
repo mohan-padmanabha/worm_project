@@ -8,5 +8,7 @@ cleanCase0
 rm -rf VTK
 rm -rf constant/cellToRegion
 rm -rf constant/*/polyMesh  # region meshes
+rm -rf system/solid*
+rm -rf constant/solid*
 
 #------------------------------------------------------------------------------

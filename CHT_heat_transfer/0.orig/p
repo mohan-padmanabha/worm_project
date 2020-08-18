@@ -22,8 +22,7 @@ boundaryField
 {
     ".*"
     {
-        type            calculated;
-        value           $internalField;
+        type            zeroGradient;
     }
 }
 

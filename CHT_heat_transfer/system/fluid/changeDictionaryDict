@@ -14,13 +14,6 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-// boundary
-// {
-//    minX
-//    {
-//        inGroups        (coupleGroup);
-//    }
-// }
 
 U
 {
@@ -28,12 +21,8 @@ U
 
     boundaryField
     {
-        ".*"
-        {
-            type            fixedValue;
-            value           uniform (0 0 0);
-        }
-        inlet
+
+        Inlet
         {
             type            fixedValue;
             value           uniform (0.1 0 0);
@@ -44,6 +33,30 @@ U
             inletValue      uniform (0 0 0);
             value           uniform (0.1 0 0);
         }
+
+        frontAndBack
+        {
+            type            empty;
+        }
+
+        wallOuter
+        {
+            type            fixedValue;
+            value           uniform (0 0 0);
+        }
+
+        defaultFaces
+        {
+            type            fixedValue;
+            value           uniform (0 0 0);
+        }
+
+        "fluid_to.*"
+        {
+            type            fixedValue;
+            value           uniform (0 0 0);
+        }
+
     }
 }
 
@@ -53,12 +66,19 @@ T
 
     boundaryField
     {
-        ".*"
+
+
+        wallOuter
         {
             type            zeroGradient;
         }
 
-        inlet
+        defaultFaces
+        {
+            type            zeroGradient;
+        }
+
+        Inlet
         {
             type            fixedValue;
             value           uniform 300;
@@ -77,8 +97,61 @@ T
             kappaMethod     fluidThermo;
             value           uniform 300;
         }
+
+        frontAndBack
+        {
+            type            empty;
+        }
     }
 }
+
+alphat
+{
+    internalField   uniform 0;
+
+    boundaryField
+    {
+
+        wallOuter
+        {
+        type            alphatJayatillekeWallFunction;
+        Prt             0.85;
+        value           $internalField;
+        }
+
+        defaultFaces
+        {
+        type            alphatJayatillekeWallFunction;
+        Prt             0.85;
+        value           $internalField;
+        }
+
+        "fluid_to_.*"
+        {
+        type            alphatJayatillekeWallFunction;
+        Prt             0.85;
+        value           $internalField;
+        }
+
+        Inlet
+        {
+            type            fixedValue;
+            value           uniform 0;
+        }
+        outlet
+        {
+            type            inletOutlet;
+            inletValue      uniform 0;
+            value           uniform 0;
+        }
+
+        frontAndBack
+        {
+            type            empty;
+        }
+    }
+}
+
 
 epsilon
 {
@@ -86,13 +159,25 @@ epsilon
 
     boundaryField
     {
-        ".*"
+        wallOuter
         {
             type            epsilonWallFunction;
             value           uniform 0.01;
         }
 
-        inlet
+        defaultFaces
+        {
+            type            epsilonWallFunction;
+            value           uniform 0.01;
+        }
+
+        "fluid_to_.*"
+        {
+            type            epsilonWallFunction;
+            value           uniform 0.01;
+        }
+
+        Inlet
         {
             type            fixedValue;
             value           uniform 0.01;
@@ -103,8 +188,58 @@ epsilon
             inletValue      uniform 0.01;
             value           uniform 0.01;
         }
+
+        frontAndBack
+        {
+            type            empty;
+        }
     }
 }
+
+nut
+{
+    internalField   uniform 0;
+
+    boundaryField
+    {
+        wallOuter
+        {
+            type            nutkWallFunction;
+            value           uniform 0;
+        }
+
+        defaultFaces
+        {
+            type            nutkWallFunction;
+            value           uniform 0;
+        }
+
+        "fluid_to_.*"
+        {
+            type            nutkWallFunction;
+            value           uniform 0;
+        }
+
+        Inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        outlet
+        {
+            type            inletOutlet;
+            inletValue      uniform 0;
+            value           uniform 0;
+        }
+
+        frontAndBack
+        {
+            type            empty;
+        }
+    }
+}
+
+
 
 k
 {
@@ -112,13 +247,25 @@ k
 
     boundaryField
     {
-        ".*"
+        wallOuter
         {
             type            kqRWallFunction;
             value           uniform 0.1;
         }
 
-        inlet
+        defaultFaces
+        {
+            type            kqRWallFunction;
+            value           uniform 0.1;
+        }
+
+        "fluid_to_.*"
+        {
+            type            kqRWallFunction;
+            value           uniform 0.1;
+        }
+
+        Inlet
         {
             type            fixedValue;
             value           uniform 0.1;
@@ -129,6 +276,11 @@ k
             inletValue      uniform 0.1;
             value           uniform 0.1;
         }
+
+        frontAndBack
+        {
+            type            empty;
+        }
     }
 }
 
@@ -138,7 +290,19 @@ p_rgh
 
     boundaryField
     {
-        ".*"
+        wallOuter
+        {
+            type            fixedFluxPressure;
+            value           uniform 1e5;
+        }
+
+        defaultFaces
+        {
+            type            fixedFluxPressure;
+            value           uniform 1e5;
+        }
+
+        "fluid_to_.*"
         {
             type            fixedFluxPressure;
             value           uniform 1e5;
@@ -149,6 +313,16 @@ p_rgh
             type            fixedValue;
             value           uniform 1e5;
         }
+
+        Inlet
+        {
+            type            zeroGradient;
+        }
+
+        frontAndBack
+        {
+            type            empty;
+        }
     }
 }
 
@@ -158,7 +332,19 @@ p
 
     boundaryField
     {
-        ".*"
+        wallOuter
+        {
+            type            calculated;
+            value           uniform 1e5;
+        }
+
+        defaultFaces
+        {
+            type            calculated;
+            value           uniform 1e5;
+        }
+
+        "fluid_to_.*"
         {
             type            calculated;
             value           uniform 1e5;
@@ -168,6 +354,15 @@ p
         {
             type            calculated;
             value           uniform 1e5;
+        }
+        Inlet
+        {
+            type            zeroGradient;
+        }
+
+        frontAndBack
+        {
+            type            empty;
         }
     }
 }

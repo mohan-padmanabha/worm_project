@@ -5,7 +5,8 @@ cd "${0%/*}" || exit                                # Run from this directory
 
 #runApplication blockMesh
 #runApplication topoSet
-
+gmshToFoam testsetup.msh 
+cp -rf boundary constant/polyMesh/boundary
 # Restore initial fields
 restore0Dir
 
@@ -14,6 +15,8 @@ runApplication splitMeshRegions -cellZones -overwrite
 # Remove fluid fields from solid regions (important for post-processing)
 for region in $(foamListRegions solid)
 do
+    cp -rf solidCon/solid/*  constant/$region/
+    cp -rf solidSys/solid/*  system/$region/
     rm -f 0/$region/{nut,alphat,epsilon,k,U,p_rgh}
     rm -f processor*/0/$region/{nut,alphat,epsilon,k,U,p_rgh}
 done
