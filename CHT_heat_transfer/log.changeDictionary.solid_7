@@ -1,0 +1,40 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _f3950763fe-20191219 OPENFOAM=1912
+Arch   : "LSB;label=32;scalar=64"
+Exec   : changeDictionary -region solid_7
+Date   : Aug 18 2020
+Time   : 17:11:46
+Host   : mohan-PC
+PID    : 13358
+I/O    : uncollated
+Case   : /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh solid_7 for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(T)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 4(frondAndBackSolid heatWall defaultFaces solid_7_to_fluid)
+Extracted patch groups:
+    group empty with patches 1(frondAndBackSolid)
+    group wall with patches 3(heatWall defaultFaces solid_7_to_fluid)
+Replacing entries in dictionary T
+Loading dictionary T
+Loaded dictionary T with entries 3(dimensions internalField boundaryField)
+Merging entries from 2(internalField boundaryField)
+Writing modified fieldDict T
+
+End
+

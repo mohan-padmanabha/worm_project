@@ -1,0 +1,55 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/solid_10/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+4
+(
+    frondAndBackSolid
+    {
+        type            empty;
+        physicalType    empty;
+        inGroups        1(empty);
+        nFaces          194;
+        startFace       329;
+    }
+    heatWall
+    {
+        type            wall;
+        physicalType    wall;
+        inGroups        1(wall);
+        nFaces          42;
+        startFace       523;
+    }
+    defaultFaces
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          194;
+        startFace       565;
+    }
+    solid_10_to_fluid
+    {
+        type            mappedWall;
+        inGroups        1(wall);
+        nFaces          76;
+        startFace       759;
+        sampleMode      nearestPatchFace;
+        sampleRegion    fluid;
+        samplePatch     fluid_to_solid_10;
+    }
+)
+
+// ************************************************************************* //

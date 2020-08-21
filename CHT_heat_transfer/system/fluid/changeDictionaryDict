@@ -240,6 +240,43 @@ nut
 }
 
 
+nuTilda
+{
+    internalField   uniform 0;
+
+    boundaryField
+    {
+        wallOuter
+        {
+            type            zeroGradient;
+        }
+
+        defaultFaces
+        {
+            type            zeroGradient;
+        }
+
+        "fluid_to_.*"
+        {
+            type            zeroGradient;
+        }
+
+        Inlet
+        {
+            type            fixedValue;
+            value           uniform 0;
+        }
+        outlet
+        {
+            type            zeroGradient;
+        }
+
+        frontAndBack
+        {
+            type            empty;
+        }
+    }
+}
 
 k
 {

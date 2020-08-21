@@ -1,0 +1,141 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/fluid";
+    object      p_rgh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 1 -1 -2 0 0 0 0 ];
+
+internalField   uniform 100000;
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            empty;
+    }
+    wallOuter
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    Inlet
+    {
+        type            zeroGradient;
+        value           uniform 100000;
+    }
+    outlet
+    {
+        type            fixedValue;
+        value           uniform 100000;
+    }
+    defaultFaces
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_11
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_5
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_3
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_6
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_1
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_18
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_14
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_16
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_10
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_13
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_12
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_4
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_7
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_15
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_8
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_2
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_17
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+    fluid_to_solid_9
+    {
+        type            fixedFluxPressure;
+        value           uniform 100000;
+    }
+}
+
+
+// ************************************************************************* //

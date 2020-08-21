@@ -1,0 +1,162 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/fluid";
+    object      alphat;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 1 -1 -1 0 0 0 0 ];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            empty;
+    }
+    wallOuter
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    Inlet
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        value           uniform 0;
+        inletValue      uniform 0;
+    }
+    defaultFaces
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_11
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_5
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_3
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_6
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_1
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_18
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_14
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_16
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_10
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_13
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_12
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_4
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_7
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_15
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_8
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_2
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_17
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+    fluid_to_solid_9
+    {
+        type            alphatJayatillekeWallFunction;
+        value           $internalField;
+        Prt             0.85;
+    }
+}
+
+
+// ************************************************************************* //

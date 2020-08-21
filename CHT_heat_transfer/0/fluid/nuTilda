@@ -1,0 +1,141 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/fluid";
+    object      nuTilda;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 2 -1 0 0 0 0 ];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            empty;
+    }
+    wallOuter
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    Inlet
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    outlet
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    defaultFaces
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_11
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_5
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_3
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_6
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_1
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_18
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_14
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_16
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_10
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_13
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_12
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_4
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_7
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_15
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_8
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_2
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_17
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+    fluid_to_solid_9
+    {
+        type            zeroGradient;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

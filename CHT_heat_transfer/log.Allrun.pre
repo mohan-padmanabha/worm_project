@@ -1,0 +1,183 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _f3950763fe-20191219 OPENFOAM=1912
+Arch   : "LSB;label=32;scalar=64"
+Exec   : gmshToFoam testsetup.msh
+Date   : Aug 18 2020
+Time   : 17:11:44
+Host   : mohan-PC
+PID    : 13272
+I/O    : uncollated
+Case   : /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Starting to read mesh format at line 2
+Read format version 4.1  ascii 0
+
+Starting to read physical names at line 5
+Physical names:25
+    Surface 1	Inlet
+    Surface 2	outlet
+    Surface 3	wallOuter
+    Surface 4	heatWall
+    Surface 5	frontAndBack
+    Surface 7	frondAndBackSolid
+    Volume 6	fluid
+    Volume 8	solid_1
+    Volume 9	solid_2
+    Volume 10	solid_3
+    Volume 11	solid_4
+    Volume 12	solid_5
+    Volume 13	solid_6
+    Volume 14	solid_7
+    Volume 15	solid_8
+    Volume 16	solid_9
+    Volume 17	solid_10
+    Volume 18	solid_11
+    Volume 19	solid_12
+    Volume 20	solid_13
+    Volume 21	solid_14
+    Volume 22	solid_15
+    Volume 23	solid_16
+    Volume 24	solid_17
+    Volume 25	solid_18
+
+Starting to read points at line 993
+Vertices to be read: 59442
+Vertices read: 59442
+
+Starting to read cells at line 120611
+Cells to be read:59468
+
+Mapping region 5 to Foam patch 0
+Mapping region 7 to Foam patch 1
+Mapping region 3 to Foam patch 2
+Mapping region 1 to Foam patch 3
+Mapping region 2 to Foam patch 4
+Mapping region 4 to Foam patch 5
+Mapping region 6 to Foam cellZone 0
+Mapping region 8 to Foam cellZone 1
+Mapping region 9 to Foam cellZone 2
+Mapping region 10 to Foam cellZone 3
+Mapping region 11 to Foam cellZone 4
+Mapping region 12 to Foam cellZone 5
+Mapping region 13 to Foam cellZone 6
+Mapping region 14 to Foam cellZone 7
+Mapping region 15 to Foam cellZone 8
+Mapping region 16 to Foam cellZone 9
+Mapping region 17 to Foam cellZone 10
+Mapping region 18 to Foam cellZone 11
+Mapping region 19 to Foam cellZone 12
+Mapping region 20 to Foam cellZone 13
+Mapping region 21 to Foam cellZone 14
+Mapping region 22 to Foam cellZone 15
+Mapping region 23 to Foam cellZone 16
+Mapping region 24 to Foam cellZone 17
+Mapping region 25 to Foam cellZone 18
+Cells:
+    total: 29033
+    hex  : 29033
+    prism: 0
+    pyr  : 0
+    tet  : 0
+
+CellZones:
+Zone	Size
+    0	25064
+    1	230
+    2	245
+    3	245
+    4	230
+    5	230
+    6	230
+    7	230
+    8	230
+    9	210
+    10	194
+    11	211
+    12	230
+    13	210
+    14	211
+    15	210
+    16	195
+    17	214
+    18	214
+
+Patch 0 gets name frontAndBack
+Patch 1 gets name frondAndBackSolid
+Patch 2 gets name wallOuter
+Patch 3 gets name Inlet
+Patch 4 gets name outlet
+Patch 5 gets name heatWall
+
+--> FOAM Warning : 
+    From function Foam::polyMesh::polyMesh(const Foam::IOobject&, Foam::pointField&&, const cellShapeList&, const faceListList&, const wordList&, const wordList&, const Foam::word&, const Foam::word&, const wordList&, bool)
+    in file meshes/polyMesh/polyMeshFromShapeMesh.C at line 593
+    Found 59476 undefined faces in mesh; adding to default patch defaultFaces
+Finding faces of patch 0
+Finding faces of patch 1
+Finding faces of patch 2
+Finding faces of patch 3
+Finding faces of patch 4
+Finding faces of patch 5
+
+FaceZones:
+Zone	Size
+
+Writing zone 0 to cellZone fluid and cellSet
+Writing zone 1 to cellZone solid_1 and cellSet
+Writing zone 2 to cellZone solid_2 and cellSet
+Writing zone 3 to cellZone solid_3 and cellSet
+Writing zone 4 to cellZone solid_4 and cellSet
+Writing zone 5 to cellZone solid_5 and cellSet
+Writing zone 6 to cellZone solid_6 and cellSet
+Writing zone 7 to cellZone solid_7 and cellSet
+Writing zone 8 to cellZone solid_8 and cellSet
+Writing zone 9 to cellZone solid_9 and cellSet
+Writing zone 10 to cellZone solid_10 and cellSet
+Writing zone 11 to cellZone solid_11 and cellSet
+Writing zone 12 to cellZone solid_12 and cellSet
+Writing zone 13 to cellZone solid_13 and cellSet
+Writing zone 14 to cellZone solid_14 and cellSet
+Writing zone 15 to cellZone solid_15 and cellSet
+Writing zone 16 to cellZone solid_16 and cellSet
+Writing zone 17 to cellZone solid_17 and cellSet
+Writing zone 18 to cellZone solid_18 and cellSet
+End
+
+Restore 0/ from 0.orig/
+Running splitMeshRegions on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+Running changeDictionary on /home/mohan/Documents/worm_project/CFD_simulation/CHT_heat_transfer
+
+Use paraFoam -touch-all to create files for paraview post-processing
+
+End
