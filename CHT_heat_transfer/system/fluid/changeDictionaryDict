@@ -114,21 +114,21 @@ alphat
 
         wallOuter
         {
-        type            alphatJayatillekeWallFunction;
+        type            compressible::alphatWallFunction;
         Prt             0.85;
         value           $internalField;
         }
 
         defaultFaces
         {
-        type            alphatJayatillekeWallFunction;
+        type            compressible::alphatWallFunction;
         Prt             0.85;
         value           $internalField;
         }
 
         "fluid_to_.*"
         {
-        type            alphatJayatillekeWallFunction;
+        type            compressible::alphatWallFunction;
         Prt             0.85;
         value           $internalField;
         }
@@ -230,45 +230,6 @@ nut
             type            inletOutlet;
             inletValue      uniform 0;
             value           uniform 0;
-        }
-
-        frontAndBack
-        {
-            type            empty;
-        }
-    }
-}
-
-
-nuTilda
-{
-    internalField   uniform 0;
-
-    boundaryField
-    {
-        wallOuter
-        {
-            type            zeroGradient;
-        }
-
-        defaultFaces
-        {
-            type            zeroGradient;
-        }
-
-        "fluid_to_.*"
-        {
-            type            zeroGradient;
-        }
-
-        Inlet
-        {
-            type            fixedValue;
-            value           uniform 0;
-        }
-        outlet
-        {
-            type            zeroGradient;
         }
 
         frontAndBack
